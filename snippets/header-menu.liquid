@@ -1,0 +1,308 @@
+{%- liquid
+  assign menu_style = layout | split: 'menu_' | last
+  assign counter = 0
+
+  if menu_style == 'center' or menu_style == 'below'
+    assign list_classes = 'justify-center -ml-4'
+    assign item_classes = 'ml-4'
+  elsif menu_style == 'left'
+    assign list_classes = 'justify-start'
+    assign item_classes = 'mr-4'
+  elsif menu_style == 'right'
+    assign list_classes = 'justify-end'
+    assign item_classes = 'ml-4'
+  endif
+
+  assign link_all = section.settings.show_all_navigation_links
+
+  assign dropdown_text_align = section.settings.dropdown_text_align
+
+  case dropdown_text_align
+    when 'text-left'
+      assign single_level_menu_flex_justify = 'justify-start'
+    when 'text-center'
+      assign single_level_menu_flex_justify = 'justify-center'
+    when 'text-right'
+      assign single_level_menu_flex_justify = 'justify-end'
+  endcase
+-%}
+
+{%- unless layout contains 'spread' -%}
+  <ul class="flex flex-wrap items-stretch self-stretch {{ list_classes }}">
+{%- endunless -%}
+{%- for link in linklists[section.settings.menu].links -%}
+  {%- liquid
+    assign child_menu = ''
+    assign grandchild_menu = ''
+    assign item_class = ''
+
+    assign dropdown_wrapper_class = 'px-section-horizontal-spacing'
+    assign column_container_class = 'flex py-4 gap-8 ' | append: drop_down_flex_alignment
+
+    if section.settings.dropdown_style == 'grid_with_border'
+      assign links_without_children = link.links | where: 'levels', 0
+      assign links_with_children = link.links | where: 'levels', 1
+
+      assign total_link_groups = 0
+      if links_without_children.size > 0
+        assign total_link_groups = total_link_groups | plus: 1
+      endif
+      if links_with_children.size > 0
+        assign dropdown_wrapper_class = ''
+        assign total_link_groups = total_link_groups | plus: links_with_children.size
+      endif
+
+      if link_all
+        assign total_link_groups = total_link_groups | plus: 1
+      endif
+
+      assign divisible_by_five = total_link_groups | modulo: 5
+      assign divisible_by_three = total_link_groups | modulo: 3
+
+      if divisible_by_five == 0
+        assign cols_float = 5.0
+        assign grid_class = 'grid-cols-5'
+      elsif divisible_by_three == 0
+        assign cols_float = 3.0
+        assign grid_class = 'grid-cols-3'
+      else
+        assign cols_float = 4.0
+        assign grid_class = 'grid-cols-4'
+      endif
+
+      assign column_container_class = 'grid gap-gutter bg-gridline-color ' | append: grid_class
+      assign item_class = 'bg-scheme-background px-section-horizontal-spacing py-section-vertical-spacing text-scheme-text'
+
+      assign dropdown_rows = total_link_groups | divided_by: cols_float | ceil
+      assign dropdown_cols = cols_float | round
+      assign dropdown_max_items = dropdown_cols | times: dropdown_rows
+      assign dropdown_remainder_cols = dropdown_max_items | minus: total_link_groups | round
+    endif
+  -%}
+
+  {%- if link.links != blank -%}
+    {%- if link_all -%}
+      {% capture link_dropdown %}
+        <div class="{{ item_class }}">
+          <a
+            {% if link.active %}
+              aria-current="page"
+            {% endif %}
+            class="{{ section.settings.dropdown_heading_font }} inline-block py-1{% if settings.header_uppercase %} uppercase{% endif %}"
+            href="{{ link.url }}"
+          >
+            {{ link.title }}
+          </a>
+        </div>
+      {% endcapture %}
+    {%- endif -%}
+
+    {%- for child_link in link.links -%}
+      {%- comment -%}
+        Link has children
+      {%- endcomment -%}
+      {%- if link.levels == 2 -%}
+        {%- comment -%}
+          If child link has children, capture grandchild_menu
+        {%- endcomment -%}
+        {% if child_link.links != blank %}
+          {%- capture grandchild_menu %}
+            {{- grandchild_menu -}}
+            <div class="{{ item_class }}">
+              <h2 class="{{ section.settings.dropdown_heading_font }} mb-2{% if settings.header_uppercase %} uppercase{% endif %}">
+                {% if link_all %}
+                  <a
+                    {% if child_link.active %}
+                      aria-current="page"
+                    {% endif %}
+                    class="inline-block py-1"
+                    href="{{ child_link.url }}"
+                    {% if child_link.active %}
+                      aria-current="page"
+                    {% endif %}
+                  >
+                    {{ child_link.title }}
+                  </a>
+                {% else %}
+                <span class="inline-block py-1">
+                  {{ child_link.title }}
+                </span>
+                {% endif %}
+              </h2>
+              <ul>
+                {%- for grandchild_link in child_link.links -%}
+                  <li class="">
+                    <a
+                      {% if grandchild_link.active %}
+                        aria-current="page"
+                      {% endif %}
+                      class="inline-block py-1"
+                      href="{{ grandchild_link.url }}"
+                    >
+                      {{- grandchild_link.title -}}
+                    </a>
+                  </li>
+                {%- endfor -%}
+              </ul>
+            </div>
+          {%- endcapture -%}
+        {%- else -%}
+          {%- capture child_menu %}
+            {{- child_menu -}}
+            <li class="">
+              <a
+                {% if child_link.active %}
+                  aria-current="page"
+                {% endif %}
+                class="inline-block py-1"
+                href="{{ child_link.url }}"
+              >
+                {{- child_link.title -}}
+              </a>
+            </li>
+          {%- endcapture -%}
+        {%- endif -%}
+      {%- else -%}
+        {% comment %} Only second-level template {% endcomment %}
+        {%- capture child_menu %}
+          {{- child_menu -}}
+          <li>
+            <a
+              {% if child_link.active %}
+                aria-current="page"
+              {% endif %}
+              class="inline-block {{ item_spacing }}"
+              href="{{ child_link.url }}"
+            >
+              {{- child_link.title -}}
+            </a>
+          </li>
+        {%- endcapture -%}
+      {%- endif -%}
+    {%- endfor -%}
+
+    {%- capture link_item_content -%}
+      <div
+        x-data="{ expanded: false }"
+        @focusout="if ($event.relatedTarget && !$el.contains($event.relatedTarget)) expanded = false"
+        class="no-js-focus-wrapper flex self-stretch"
+      >
+        <button
+          class="inline-flex {{ item_spacing }} items-center{% if settings.header_uppercase %} uppercase{% endif %}"
+          @click="expanded = !expanded"
+          :aria-expanded="expanded ? true : 'false'"
+          aria-controls="menu{{ counter }}"
+        >
+          <span class="inline-block pr-1">{{ link.title }}</span>
+          {%- if settings.accordion_icon == 'caret' -%}
+            <span
+              class="rotate mr-1 inline-block h-3 w-3 origin-center transform align-middle transition"
+              :class="{ 'rotate-180' : expanded }"
+            >
+              {%- render 'icon-chevron-down' -%}
+            </span>
+          {%- else -%}
+            <span
+              class="mr-1 inline-block h-3 w-3 origin-center align-middle"
+              x-show="!expanded"
+            >
+              {%- render 'icon-plus' -%}
+            </span>
+            <span
+              class="mr-1 inline-block h-3 w-3 origin-center align-middle"
+              x-show="expanded"
+              style="display: none;"
+            >
+              {%- render 'icon-minus' -%}
+            </span>
+          {%- endif -%}
+        </button>
+        <div
+          id="menu{{ counter }}"
+          class="no-js-focus-container absolute bottom-auto left-0 top-full z-20 w-full border-y-gridline border-gridline-color bg-scheme-background text-scheme-text"
+          x-cloak
+          x-show="expanded"
+          x-transition:enter="transition ease duration-200 motion-reduce:duration-0"
+          x-transition:enter-start="opacity-0"
+          x-transition:enter-end="opacity-100"
+          x-transition:leave="transition ease duration-200 motion-reduce:duration-0"
+          x-transition:leave-start="opacity-100"
+          x-transition:leave-end="opacity-0"
+          @click.outside.prevent="expanded = false"
+          data-color-scheme="{{ section_color }}"
+        >
+          <div class="{{ dropdown_wrapper_class }} {{ dropdown_text_align }}">
+            {%- if child_menu != blank and grandchild_menu == blank -%}
+              <ul class="flex gap-4 {{ item_spacing }} {{ single_level_menu_flex_justify }}">
+                {{ child_menu }}
+              </ul>
+            {%- elsif child_menu != blank and grandchild_menu != blank -%}
+              <div class="{{ column_container_class }}">
+                {{ link_dropdown }}
+                <ul class="{{ item_class }}">
+                  {{ child_menu }}
+                </ul>
+                {{ grandchild_menu }}
+                {%- if dropdown_remainder_cols > 0 -%}
+                  <div
+                    class="col-span-var bg-scheme-background"
+                    style="--col-span: {{ dropdown_remainder_cols }};"
+                    aria-hidden="true"
+                    role="presentation"></div>
+                {%- endif -%}
+              </div>
+            {% else -%}
+              <div class="{{ column_container_class }}">
+                {{ link_dropdown }}
+                {{ grandchild_menu }}
+                {%- if dropdown_remainder_cols > 0 -%}
+                  <div
+                    class="col-span-var bg-scheme-background"
+                    style="--col-span: {{ dropdown_remainder_cols }};"
+                    aria-hidden="true"
+                    role="presentation"></div>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+    {%- endcapture -%}
+
+    {%- unless layout contains 'spread' -%}
+      <li class="flex self-stretch {{ item_classes }}">
+        {{ link_item_content }}
+      </li>
+    {%- else -%}
+      {{ link_item_content }}
+    {%- endunless -%}
+    {% assign counter = counter | plus: 1 %}
+  {%- else -%}
+    {% capture link_item_content %}
+      <a
+        {% if link.active %}
+          aria-current="page"
+        {% endif %}
+        class="flex {{ item_spacing }} relative{% if layout contains 'spread' %} self-stretch inline-flex flex-col{% endif %}"
+        href="{{ link.url }}"
+      >
+        <span class="m-auto inline-block">{{ link.title }}</span>
+        {%- if link.active -%}
+          <span
+            class="absolute bottom-0 left-1/2 block h-2 w-gridline -translate-x-1/2 bg-gridline-color"
+          ></span>
+        {%- endif -%}
+      </a>
+    {% endcapture %}
+    {%- unless layout contains 'spread' -%}
+      <li class="inline-flex items-stretch {{ item_classes }}">
+        {{ link_item_content }}
+      </li>
+    {%- else -%}
+      {{ link_item_content }}
+    {%- endunless -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- unless layout contains 'spread' -%}
+  </ul>
+{%- endunless -%}

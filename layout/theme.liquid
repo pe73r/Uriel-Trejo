@@ -1,0 +1,246 @@
+<!doctype html>
+<html class="no-js" lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="">
+    <link rel="canonical" href="{{ canonical_url }}">
+    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+
+    {%- if settings.favicon != blank -%}
+      <link
+        rel="icon"
+        type="image/png"
+        href="{{ settings.favicon | image_url: width: 32, height: 32 }}"
+      >
+    {%- endif -%}
+
+    {%- unless settings.type_header_font.system?
+      and settings.type_body_font.system?
+    -%}
+      <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+    {%- endunless -%}
+
+    <title>
+      {{ page_title }}
+      {%- if current_tags %}
+        &ndash; tagged "{{ current_tags | join: ', ' }}"
+      {%- endif -%}
+      {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
+      {%- unless page_title contains shop.name %}
+        &ndash; {{ shop.name -}}
+      {%- endunless -%}
+    </title>
+
+    {% if page_description %}
+      <meta name="description" content="{{ page_description | escape }}">
+    {% endif %}
+
+    {{ content_for_header }}
+
+    {%- liquid
+      render 'meta-tags'
+      render 'js-bridge'
+    -%}
+
+    <script src="{{ 'utils.js' | asset_url }}" defer></script>
+    <script src="{{ 'images.js' | asset_url }}" defer></script>
+    <script
+      src="{{ 'polyfills-inert.bundle.min.js' | asset_url }}"
+      type="module"
+    ></script>
+    <script
+      src="{{ 'global.bundle.min.js' | asset_url }}"
+      type="module"
+    ></script>
+
+    {% if template contains 'customers' %}
+      {% comment %}theme-check-disable ParserBlockingScriptTag{% endcomment %}
+      {{ 'shopify_common.js' | shopify_asset_url | script_tag }}
+      {{ 'customer_area.js' | shopify_asset_url | script_tag }}
+      {% comment %}theme-check-enable ParserBlockingScriptTag{% endcomment %}
+    {% endif %}
+
+    {% if settings.cart_type == 'drawer' or template == 'cart' %}
+      <script src="{{ 'cart-items.js' | asset_url }}" type="module"></script>
+      <script src="{{ 'cart-footer.js' | asset_url }}" type="module"></script>
+      {% if settings.cart_notes_enable %}
+        <script src="{{ 'cart-note.js' | asset_url }}" type="module"></script>
+      {% endif %}
+    {% endif %}
+
+    <script src="{{ 'quantity.js' | asset_url }}" type="module"></script>
+    <script src="{{ 'rte.js' | asset_url }}" type="module"></script>
+
+    {% if request.design_mode %}
+      <script
+        src="{{ 'filterable.js' | asset_url }}"
+        type="module"
+      ></script>
+      {% comment %} If theme editor, load all modules {% endcomment %}
+      <script src="{{ 'cart-count.js' | asset_url }}" type="module"></script>
+      <script src="{{ 'header.js' | asset_url }}" type="module"></script>
+      {% if settings.predictive_search_enabled %}
+        <script
+          src="{{ 'predictive-search.js' | asset_url }}"
+          type="module"
+        ></script>
+      {% endif %}
+      <script
+        src="{{ 'range-control.js' | asset_url }}"
+        type="module"
+      ></script>
+      <script src="{{ 'sidebar.js' | asset_url }}" type="module"></script>
+      <script
+        src="{{ 'scrolling-items.js' | asset_url }}"
+        type="module"
+      ></script>
+      <script
+        src="{{ 'scrolling-items.js' | asset_url }}"
+        type="module"
+      ></script>
+      <script
+        src="{{ 'scrolling-link.js' | asset_url }}"
+        type="module"
+      ></script>
+      <script
+        src="{{ 'splide.bundle.min.js' | asset_url }}"
+        type="module"
+      ></script>
+      <script
+        src="{{ 'slideshows.js' | asset_url }}"
+        type="module"
+      ></script>
+      <script src="{{ 'product-form.js' | asset_url }}" type="module"></script>
+      <script
+        src="{{ 'variant-drop-down.js' | asset_url }}"
+        type="module"
+      ></script>
+      <script src="{{ 'quick-buy.js' | asset_url }}" type="module"></script>
+      <script src="{{ 'product.js' | asset_url }}" type="module"></script>
+      <script
+        src="{{ 'product-media-model.js' | asset_url }}"
+        type="module"
+      ></script>
+      <script
+        src="{{ 'product-media-video.js' | asset_url }}"
+        type="module"
+      ></script>
+      <script
+        src="{{ 'video.js' | asset_url }}"
+        type="module"
+      ></script>
+      <script
+        src="{{ 'youtube-embed.js' | asset_url }}"
+        type="module"
+      ></script>
+      <script
+        src="{{ 'vimeo-embed.js' | asset_url }}"
+        type="module"
+      ></script>
+      <script
+        src="{{ 'html-video.js' | asset_url }}"
+        type="module"
+      ></script>
+      <script
+        src="{{ 'background-video-youtube.js' | asset_url }}"
+        type="module"
+      ></script>
+      <script
+        src="{{ 'background-video.js' | asset_url }}"
+        type="module"
+      ></script>
+      <script
+        src="{{ 'video-section.js' | asset_url }}"
+        type="module"
+      ></script>
+      <script
+        src="{{ 'gift-card-recipient.js' | asset_url }}"
+        type="module"
+      ></script>
+      <script
+        src="{{ 'free-shipping-bar.js' | asset_url }}"
+        type="module"
+      ></script>
+      <script
+        src="{{ 'promo-popup.js' | asset_url }}"
+        type="module"
+      ></script>
+      <script
+        src="{{ 'privacy-banner.js' | asset_url }}"
+        type="module"
+      ></script>
+      <script
+        src="{{ 'age-check.js' | asset_url }}"
+        type="module"
+      ></script>
+      <script
+        src="{{ 'theme-editor-support.js' | asset_url }}"
+        type="module"
+      ></script>
+      <script src="{{ 'table.js' | asset_url }}" type="module"></script>
+    {% endif %}
+
+    {%- render 'css-bridge' -%}
+
+    {{ 'base.bundle.css' | asset_url | stylesheet_tag }}
+  </head>
+
+  <body>
+    <a class="skip-link" href="#MainContent">
+      {{- 'general.accessibility.skip_to_content' | t -}}
+    </a>
+
+    {% sections 'header-group' %}
+    {%- section 'menu-drawer' -%}
+    {% render 'header-group-support' %}
+
+    <main id="MainContent">
+      {{ content_for_layout }}
+    </main>
+
+    {% liquid
+      sections 'footer-group'
+      sections 'overlay-group'
+    %}
+
+    <div
+      id="screenreader-announce"
+      class="sr-only"
+      aria-live="polite"
+      role="status"
+    ></div>
+
+    <ul hidden>
+      <li id="a11y-refresh-page-message">
+        {{ 'general.accessibility.refresh_page' | t }}
+      </li>
+      <li id="a11y-selection-message">
+        {{ 'general.accessibility.selection_help' | t }}
+      </li>
+    </ul>
+
+    {% comment %} Modal containers {% endcomment %}
+    {% liquid
+      render 'left-drawer'
+      render 'right-drawer'
+      render 'quick-buy-drawer'
+      render 'promo'
+      render 'popup'
+      render 'modal'
+    %}
+
+    <script src="{{ 'modals.js' | asset_url }}" type="module"></script>
+
+    {% comment %} Modal contents {% endcomment %}
+    {% if settings.cart_type == 'drawer' %}
+      {% render 'drawer-cart' %}
+    {% endif %}
+
+    <script
+      src="{{ 'alpine.bundle.js' | asset_url }}"
+      type="module"
+    ></script>
+  </body>
+</html>
