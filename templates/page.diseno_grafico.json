@@ -275,6 +275,42 @@
         "first_block_media_crop": "0",
         "second_block_media_style": "fill"
       }
+    },
+    "media_split_jdYAWM": {
+      "type": "media-split",
+      "blocks": {
+        "image_RQXARQ": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/dossier_dfkm_26_w.jpg",
+            "indent": false,
+            "link": "",
+            "caption": "",
+            "content_position": "justify-center items-center text-center",
+            "color_scheme": ""
+          }
+        },
+        "image_kgUTQc": {
+          "type": "image",
+          "settings": {
+            "indent": false,
+            "link": "",
+            "caption": "",
+            "content_position": "justify-center items-center text-center",
+            "color_scheme": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_RQXARQ",
+        "image_kgUTQc"
+      ],
+      "name": "Image split",
+      "settings": {
+        "first_block_width": "6",
+        "first_block_media_crop": "1",
+        "second_block_media_style": "fill"
+      }
     }
   },
   "order": [
@@ -285,6 +321,7 @@
     "media_split_3UyDVp",
     "media_split_dbV6Hz",
     "media_split_8z9CCG",
-    "media_split_Htztgx"
+    "media_split_Htztgx",
+    "media_split_jdYAWM"
   ]
 }
