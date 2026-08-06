@@ -289,21 +289,10 @@
             "content_position": "justify-center items-center text-center",
             "color_scheme": ""
           }
-        },
-        "image_kgUTQc": {
-          "type": "image",
-          "settings": {
-            "indent": false,
-            "link": "",
-            "caption": "",
-            "content_position": "justify-center items-center text-center",
-            "color_scheme": ""
-          }
         }
       },
       "block_order": [
-        "image_RQXARQ",
-        "image_kgUTQc"
+        "image_RQXARQ"
       ],
       "name": "Image split",
       "settings": {
