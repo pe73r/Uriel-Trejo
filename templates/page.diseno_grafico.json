@@ -1,1 +1,290 @@
-{"sections":{"main":{"type":"main-page","settings":{"content_width":"lg:w-full","content_position":"lg:justify-start","color_scheme":"","override_header_footer_color_scheme":false}},"text_columns_with_images_e6L8Xt":{"type":"text-columns-with-images","blocks":{"column_K7TiPy":{"type":"column","settings":{"show_image":true,"image":"shopify:\/\/shop_images\/Captura_de_pantalla_2012-09-14_a_las_18.57.52_c814214c-67d2-4f2a-b6b2-ea2a1d1676a2.png","title":"Mula Fest","text":"<p>Collab Druck und graphic design<\/p>","cta_link":"","cta_text":"","color_scheme":""}},"column_jYCVJt":{"type":"column","settings":{"show_image":true,"image":"shopify:\/\/shop_images\/IMG_0471.jpg","title":"WDK","text":"","cta_link":"","cta_text":"","color_scheme":""}},"column_DyYycX":{"type":"column","settings":{"show_image":true,"image":"shopify:\/\/shop_images\/IMG_0467.jpg","title":"Mad City Rdes By Okley","text":"","cta_link":"","cta_text":"","color_scheme":""}}},"block_order":["column_K7TiPy","column_jYCVJt","column_DyYycX"],"settings":{"title":"","crop":"1","text_alignment":"text-left"}},"rich_text_MPpqNc":{"type":"rich-text","settings":{"title":"Graphic design","text":"","text_alignment":"text-left","cta_link":"","cta_text":"","cta_style":"link","desktop_width":"full","desktop_alignment":"left","color_scheme":""}},"media_split_xyWgiB":{"type":"media-split","blocks":{"image_Aq4BAF":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/hell_in_sout_II_1942542f-c1b4-4e78-b625-d1ac85d1e83b.jpg","indent":false,"link":"","caption":"","content_position":"justify-center items-center text-center","color_scheme":""}},"image_Whfkir":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/ecmc_sticker_4b928576-1502-4663-8752-4f016f0c4948.jpg","indent":false,"link":"","caption":"","content_position":"justify-center items-center text-center","color_scheme":""}}},"block_order":["image_Aq4BAF","image_Whfkir"],"settings":{"first_block_width":"6","first_block_media_crop":"0","second_block_media_style":"fill"}},"media_split_3UyDVp":{"type":"media-split","blocks":{"image_8G4fmA":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/TFM_a9a08d49-7585-41db-9297-66841161c40c.jpg","indent":false,"link":"","caption":"","content_position":"justify-center items-center text-center","color_scheme":""}},"image_Bzzhq7":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/ruls_2f6bd7f5-98c7-4e16-b6cd-3b4cdbbda228.jpg","indent":false,"link":"","caption":"","content_position":"justify-center items-center text-center","color_scheme":""}}},"block_order":["image_8G4fmA","image_Bzzhq7"],"settings":{"first_block_width":"6","first_block_media_crop":"0","second_block_media_style":"fill"}},"media_split_dbV6Hz":{"type":"media-split","blocks":{"image_FykrhF":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/chile_san_pascual-1.png","indent":false,"link":"","caption":"","content_position":"justify-center items-center text-center","color_scheme":""}},"image_Vcw9hP":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/jazmin_bolsa_c-1.png","indent":false,"link":"","caption":"","content_position":"justify-center items-center text-center","color_scheme":""}}},"block_order":["image_FykrhF","image_Vcw9hP"],"settings":{"first_block_width":"6","first_block_media_crop":"0","second_block_media_style":"fill"}},"media_split_8z9CCG":{"type":"media-split","blocks":{"image_bQLnpp":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Kerlwachtwdk-1.png","indent":false,"link":"","caption":"","content_position":"justify-center items-center text-center","color_scheme":""}},"image_fWQagK":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/logo-1.png","indent":false,"link":"","caption":"","content_position":"justify-center items-center text-center","color_scheme":""}}},"block_order":["image_bQLnpp","image_fWQagK"],"settings":{"first_block_width":"6","first_block_media_crop":"0","second_block_media_style":"fill"}},"media_split_Htztgx":{"type":"media-split","blocks":{"image_mhW4hr":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/camis_corona_cambios-2.png","indent":false,"link":"","caption":"","content_position":"justify-center items-center text-center","color_scheme":""}},"image_YBwqbg":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/peruchalogo-2.png","indent":false,"link":"","caption":"","content_position":"justify-center items-center text-center","color_scheme":""}}},"block_order":["image_mhW4hr","image_YBwqbg"],"settings":{"first_block_width":"6","first_block_media_crop":"0","second_block_media_style":"fill"}}},"order":["main","text_columns_with_images_e6L8Xt","rich_text_MPpqNc","media_split_xyWgiB","media_split_3UyDVp","media_split_dbV6Hz","media_split_8z9CCG","media_split_Htztgx"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "content_width": "lg:w-full",
+        "content_position": "lg:justify-start",
+        "color_scheme": "",
+        "override_header_footer_color_scheme": false
+      }
+    },
+    "text_columns_with_images_e6L8Xt": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "column_FgczVE": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify://shop_images/calavera_ecde306c-977b-42a5-bf65-01b4e717a7da.jpg",
+            "title": "",
+            "text": "<p>Miquixtli</p>",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "scheme1"
+          }
+        },
+        "column_K7TiPy": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify://shop_images/Captura_de_pantalla_2012-09-14_a_las_18.57.52_c814214c-67d2-4f2a-b6b2-ea2a1d1676a2.png",
+            "title": "Mula Fest",
+            "text": "<p>Collab Druck und graphic design</p>",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": ""
+          }
+        },
+        "column_jYCVJt": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify://shop_images/IMG_0471.jpg",
+            "title": "WDK",
+            "text": "",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": ""
+          }
+        },
+        "column_DyYycX": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify://shop_images/IMG_0467.jpg",
+            "title": "Mad City Rdes By Okley",
+            "text": "",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_FgczVE",
+        "column_K7TiPy",
+        "column_jYCVJt",
+        "column_DyYycX"
+      ],
+      "settings": {
+        "title": "",
+        "crop": "1",
+        "text_alignment": "text-left"
+      }
+    },
+    "rich_text_MPpqNc": {
+      "type": "rich-text",
+      "settings": {
+        "title": "Graphic design",
+        "text": "",
+        "text_alignment": "text-left",
+        "cta_link": "",
+        "cta_text": "",
+        "cta_style": "link",
+        "desktop_width": "full",
+        "desktop_alignment": "left",
+        "color_scheme": ""
+      }
+    },
+    "media_split_xyWgiB": {
+      "type": "media-split",
+      "blocks": {
+        "image_Aq4BAF": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/hell_in_sout_II_1942542f-c1b4-4e78-b625-d1ac85d1e83b.jpg",
+            "indent": false,
+            "link": "",
+            "caption": "",
+            "content_position": "justify-center items-center text-center",
+            "color_scheme": ""
+          }
+        },
+        "image_Whfkir": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ecmc_sticker_4b928576-1502-4663-8752-4f016f0c4948.jpg",
+            "indent": false,
+            "link": "",
+            "caption": "",
+            "content_position": "justify-center items-center text-center",
+            "color_scheme": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_Aq4BAF",
+        "image_Whfkir"
+      ],
+      "settings": {
+        "first_block_width": "6",
+        "first_block_media_crop": "0",
+        "second_block_media_style": "fill"
+      }
+    },
+    "media_split_3UyDVp": {
+      "type": "media-split",
+      "blocks": {
+        "image_8G4fmA": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/TFM_a9a08d49-7585-41db-9297-66841161c40c.jpg",
+            "indent": false,
+            "link": "",
+            "caption": "",
+            "content_position": "justify-center items-center text-center",
+            "color_scheme": ""
+          }
+        },
+        "image_Bzzhq7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/ruls_2f6bd7f5-98c7-4e16-b6cd-3b4cdbbda228.jpg",
+            "indent": false,
+            "link": "",
+            "caption": "",
+            "content_position": "justify-center items-center text-center",
+            "color_scheme": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_8G4fmA",
+        "image_Bzzhq7"
+      ],
+      "settings": {
+        "first_block_width": "6",
+        "first_block_media_crop": "0",
+        "second_block_media_style": "fill"
+      }
+    },
+    "media_split_dbV6Hz": {
+      "type": "media-split",
+      "blocks": {
+        "image_FykrhF": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/chile_san_pascual-1.png",
+            "indent": false,
+            "link": "",
+            "caption": "",
+            "content_position": "justify-center items-center text-center",
+            "color_scheme": ""
+          }
+        },
+        "image_Vcw9hP": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/jazmin_bolsa_c-1.png",
+            "indent": false,
+            "link": "",
+            "caption": "",
+            "content_position": "justify-center items-center text-center",
+            "color_scheme": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_FykrhF",
+        "image_Vcw9hP"
+      ],
+      "settings": {
+        "first_block_width": "6",
+        "first_block_media_crop": "0",
+        "second_block_media_style": "fill"
+      }
+    },
+    "media_split_8z9CCG": {
+      "type": "media-split",
+      "blocks": {
+        "image_bQLnpp": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Kerlwachtwdk-1.png",
+            "indent": false,
+            "link": "",
+            "caption": "",
+            "content_position": "justify-center items-center text-center",
+            "color_scheme": ""
+          }
+        },
+        "image_fWQagK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/logo-1.png",
+            "indent": false,
+            "link": "",
+            "caption": "",
+            "content_position": "justify-center items-center text-center",
+            "color_scheme": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_bQLnpp",
+        "image_fWQagK"
+      ],
+      "settings": {
+        "first_block_width": "6",
+        "first_block_media_crop": "0",
+        "second_block_media_style": "fill"
+      }
+    },
+    "media_split_Htztgx": {
+      "type": "media-split",
+      "blocks": {
+        "image_mhW4hr": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/camis_corona_cambios-2.png",
+            "indent": false,
+            "link": "",
+            "caption": "",
+            "content_position": "justify-center items-center text-center",
+            "color_scheme": ""
+          }
+        },
+        "image_YBwqbg": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/peruchalogo-2.png",
+            "indent": false,
+            "link": "",
+            "caption": "",
+            "content_position": "justify-center items-center text-center",
+            "color_scheme": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_mhW4hr",
+        "image_YBwqbg"
+      ],
+      "settings": {
+        "first_block_width": "6",
+        "first_block_media_crop": "0",
+        "second_block_media_style": "fill"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "text_columns_with_images_e6L8Xt",
+    "rich_text_MPpqNc",
+    "media_split_xyWgiB",
+    "media_split_3UyDVp",
+    "media_split_dbV6Hz",
+    "media_split_8z9CCG",
+    "media_split_Htztgx"
+  ]
+}
