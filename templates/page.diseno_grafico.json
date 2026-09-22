@@ -337,6 +337,43 @@
         "first_block_media_crop": "1",
         "second_block_media_style": "fill"
       }
+    },
+    "media_split_JTUwRL": {
+      "type": "media-split",
+      "blocks": {
+        "image_3feEnE": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/colores_gallo.jpg",
+            "indent": true,
+            "link": "",
+            "caption": "",
+            "content_position": "justify-center items-center text-center",
+            "color_scheme": ""
+          }
+        },
+        "image_a8jUA7": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/tijuana.jpg",
+            "indent": false,
+            "link": "",
+            "caption": "",
+            "content_position": "justify-center items-center text-center",
+            "color_scheme": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_3feEnE",
+        "image_a8jUA7"
+      ],
+      "name": "Image split",
+      "settings": {
+        "first_block_width": "6",
+        "first_block_media_crop": "1",
+        "second_block_media_style": "fill"
+      }
     }
   },
   "order": [
@@ -349,6 +386,7 @@
     "media_split_8z9CCG",
     "media_split_Htztgx",
     "media_split_jdYAWM",
-    "media_split_Qjz8Qp"
+    "media_split_Qjz8Qp",
+    "media_split_JTUwRL"
   ]
 }
