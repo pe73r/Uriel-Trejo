@@ -300,6 +300,43 @@
         "first_block_media_crop": "1",
         "second_block_media_style": "fill"
       }
+    },
+    "media_split_Qjz8Qp": {
+      "type": "media-split",
+      "blocks": {
+        "image_99fydR": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/pinonkw.jpg",
+            "indent": false,
+            "link": "",
+            "caption": "",
+            "content_position": "justify-center items-center text-center",
+            "color_scheme": ""
+          }
+        },
+        "image_JfXVNG": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/kulturgnal056.jpg",
+            "indent": false,
+            "link": "",
+            "caption": "",
+            "content_position": "justify-center items-center text-center",
+            "color_scheme": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_99fydR",
+        "image_JfXVNG"
+      ],
+      "name": "Image split",
+      "settings": {
+        "first_block_width": "6",
+        "first_block_media_crop": "1",
+        "second_block_media_style": "fill"
+      }
     }
   },
   "order": [
@@ -311,6 +348,7 @@
     "media_split_dbV6Hz",
     "media_split_8z9CCG",
     "media_split_Htztgx",
-    "media_split_jdYAWM"
+    "media_split_jdYAWM",
+    "media_split_Qjz8Qp"
   ]
 }
