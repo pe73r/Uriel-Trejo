@@ -282,30 +282,9 @@
           "type": "column",
           "settings": {
             "show_image": true,
+            "image": "shopify://shop_images/20210729_123653.jpg",
             "title": "",
-            "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>",
-            "cta_link": "",
-            "cta_text": "",
-            "color_scheme": ""
-          }
-        },
-        "column_9G8GA3": {
-          "type": "column",
-          "settings": {
-            "show_image": true,
-            "title": "",
-            "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>",
-            "cta_link": "",
-            "cta_text": "",
-            "color_scheme": ""
-          }
-        },
-        "column_BkrVET": {
-          "type": "column",
-          "settings": {
-            "show_image": true,
-            "title": "",
-            "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>",
+            "text": "",
             "cta_link": "",
             "cta_text": "",
             "color_scheme": ""
@@ -313,9 +292,7 @@
         }
       },
       "block_order": [
-        "column_NY84AD",
-        "column_9G8GA3",
-        "column_BkrVET"
+        "column_NY84AD"
       ],
       "name": "Text columns with images",
       "settings": {
