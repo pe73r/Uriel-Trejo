@@ -374,6 +374,80 @@
         "first_block_media_crop": "1",
         "second_block_media_style": "fill"
       }
+    },
+    "media_split_QfHBAh": {
+      "type": "media-split",
+      "blocks": {
+        "image_7CkCPD": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/logos_mm-1.jpg",
+            "indent": false,
+            "link": "",
+            "caption": "",
+            "content_position": "justify-center items-center text-center",
+            "color_scheme": ""
+          }
+        },
+        "image_QjgXim": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/logos_mm-2.jpg",
+            "indent": false,
+            "link": "",
+            "caption": "",
+            "content_position": "justify-center items-center text-center",
+            "color_scheme": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_7CkCPD",
+        "image_QjgXim"
+      ],
+      "name": "Image split",
+      "settings": {
+        "first_block_width": "6",
+        "first_block_media_crop": "1",
+        "second_block_media_style": "fill"
+      }
+    },
+    "media_split_cyC97D": {
+      "type": "media-split",
+      "blocks": {
+        "image_WdRNkc": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/kiefer_mvv048.jpg",
+            "indent": false,
+            "link": "",
+            "caption": "",
+            "content_position": "justify-center items-center text-center",
+            "color_scheme": ""
+          }
+        },
+        "image_CTNiet": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/fotilito-1.jpg",
+            "indent": false,
+            "link": "",
+            "caption": "",
+            "content_position": "justify-center items-center text-center",
+            "color_scheme": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_WdRNkc",
+        "image_CTNiet"
+      ],
+      "name": "Image split",
+      "settings": {
+        "first_block_width": "6",
+        "first_block_media_crop": "1",
+        "second_block_media_style": "fill"
+      }
     }
   },
   "order": [
@@ -387,6 +461,8 @@
     "media_split_Htztgx",
     "media_split_jdYAWM",
     "media_split_Qjz8Qp",
-    "media_split_JTUwRL"
+    "media_split_JTUwRL",
+    "media_split_QfHBAh",
+    "media_split_cyC97D"
   ]
 }
