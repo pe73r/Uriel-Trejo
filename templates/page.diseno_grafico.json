@@ -27,7 +27,7 @@
             "show_image": true,
             "image": "shopify://shop_images/calaveritas.jpg",
             "title": "",
-            "text": "<p>Miquixtli</p>",
+            "text": "",
             "cta_link": "",
             "cta_text": "",
             "color_scheme": "scheme1"
@@ -38,7 +38,7 @@
           "settings": {
             "show_image": true,
             "image": "shopify://shop_images/conejo.jpg",
-            "title": "tochtli",
+            "title": "",
             "text": "",
             "cta_link": "",
             "cta_text": "",
@@ -62,7 +62,7 @@
           "settings": {
             "show_image": true,
             "image": "shopify://shop_images/IMG_0471.jpg",
-            "title": "WDK",
+            "title": "World Destruction Kids",
             "text": "",
             "cta_link": "",
             "cta_text": "",
