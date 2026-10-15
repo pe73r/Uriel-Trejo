@@ -419,7 +419,7 @@
           "type": "image",
           "settings": {
             "image": "shopify://shop_images/kiefer_1.jpg",
-            "indent": false,
+            "indent": true,
             "link": "",
             "caption": "",
             "content_position": "justify-center items-center text-center",
