@@ -240,6 +240,18 @@
     "text_columns_with_images_w76D48": {
       "type": "text-columns-with-images",
       "blocks": {
+        "column_eDjnam": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify://shop_images/20180527_145411.jpg",
+            "title": "",
+            "text": "",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": "scheme1"
+          }
+        },
         "column_yhiMEN": {
           "type": "column",
           "settings": {
@@ -254,8 +266,58 @@
         }
       },
       "block_order": [
+        "column_eDjnam",
         "column_yhiMEN"
       ],
+      "settings": {
+        "title": "",
+        "crop": "1",
+        "text_alignment": "text-left"
+      }
+    },
+    "text_columns_with_images_prUT6d": {
+      "type": "text-columns-with-images",
+      "blocks": {
+        "column_NY84AD": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "title": "",
+            "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": ""
+          }
+        },
+        "column_9G8GA3": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "title": "",
+            "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": ""
+          }
+        },
+        "column_BkrVET": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "title": "",
+            "text": "<p>Share blog posts, products, or promotions with your customers. Use this text to describe products, share details on availability and style, or as a space to display recent reviews or FAQs.</p>",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_NY84AD",
+        "column_9G8GA3",
+        "column_BkrVET"
+      ],
+      "name": "Text columns with images",
       "settings": {
         "title": "",
         "crop": "1",
@@ -269,6 +331,7 @@
     "text_columns_with_images_dP4CGE",
     "text_columns_with_images_ba6r8c",
     "text_columns_with_images_mxqpEG",
-    "text_columns_with_images_w76D48"
+    "text_columns_with_images_w76D48",
+    "text_columns_with_images_prUT6d"
   ]
 }
