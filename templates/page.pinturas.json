@@ -18,6 +18,42 @@
         "override_header_footer_color_scheme": false
       }
     },
+    "media_split_hbgUK7": {
+      "type": "media-split",
+      "blocks": {
+        "image_Fntymw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/20240124_103625_-_Kopie.jpg",
+            "indent": false,
+            "link": "",
+            "caption": "",
+            "content_position": "justify-center items-center text-center",
+            "color_scheme": ""
+          }
+        },
+        "image_qw9W6w": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/20231229_144612.jpg",
+            "indent": false,
+            "link": "shopify://pages/coatlicue",
+            "caption": "See the work",
+            "content_position": "justify-center items-center text-center",
+            "color_scheme": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_Fntymw",
+        "image_qw9W6w"
+      ],
+      "settings": {
+        "first_block_width": "6",
+        "first_block_media_crop": "1",
+        "second_block_media_style": "fill"
+      }
+    },
     "media_split_qLi4L3": {
       "type": "media-split",
       "blocks": {
@@ -243,42 +279,6 @@
         "second_block_media_style": "fill"
       }
     },
-    "media_split_hbgUK7": {
-      "type": "media-split",
-      "blocks": {
-        "image_Fntymw": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/20240124_103625_-_Kopie.jpg",
-            "indent": false,
-            "link": "",
-            "caption": "",
-            "content_position": "justify-center items-center text-center",
-            "color_scheme": ""
-          }
-        },
-        "image_qw9W6w": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/20231229_144612.jpg",
-            "indent": false,
-            "link": "shopify://pages/coatlicue",
-            "caption": "See the work",
-            "content_position": "justify-center items-center text-center",
-            "color_scheme": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_Fntymw",
-        "image_qw9W6w"
-      ],
-      "settings": {
-        "first_block_width": "6",
-        "first_block_media_crop": "1",
-        "second_block_media_style": "fill"
-      }
-    },
     "media_split_V6NnTU": {
       "type": "media-split",
       "blocks": {
@@ -318,12 +318,12 @@
   },
   "order": [
     "main",
+    "media_split_hbgUK7",
     "media_split_qLi4L3",
     "text_columns_with_images_eUVz6k",
     "text_columns_with_images_VfCaer",
     "media_split_C3wDpy",
     "media_split_wMtFn8",
-    "media_split_hbgUK7",
     "media_split_V6NnTU"
   ]
 }
