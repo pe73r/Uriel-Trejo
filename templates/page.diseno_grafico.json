@@ -25,12 +25,24 @@
           "type": "column",
           "settings": {
             "show_image": true,
-            "image": "shopify://shop_images/calavera_ecde306c-977b-42a5-bf65-01b4e717a7da.jpg",
+            "image": "shopify://shop_images/calaveritas.jpg",
             "title": "",
             "text": "<p>Miquixtli</p>",
             "cta_link": "",
             "cta_text": "",
             "color_scheme": "scheme1"
+          }
+        },
+        "column_DyYycX": {
+          "type": "column",
+          "settings": {
+            "show_image": true,
+            "image": "shopify://shop_images/conejo.jpg",
+            "title": "Mad City Rdes By Okley",
+            "text": "",
+            "cta_link": "",
+            "cta_text": "",
+            "color_scheme": ""
           }
         },
         "column_K7TiPy": {
@@ -56,25 +68,13 @@
             "cta_text": "",
             "color_scheme": ""
           }
-        },
-        "column_DyYycX": {
-          "type": "column",
-          "settings": {
-            "show_image": true,
-            "image": "shopify://shop_images/IMG_0467.jpg",
-            "title": "Mad City Rdes By Okley",
-            "text": "",
-            "cta_link": "",
-            "cta_text": "",
-            "color_scheme": ""
-          }
         }
       },
       "block_order": [
         "column_FgczVE",
+        "column_DyYycX",
         "column_K7TiPy",
-        "column_jYCVJt",
-        "column_DyYycX"
+        "column_jYCVJt"
       ],
       "settings": {
         "title": "",
