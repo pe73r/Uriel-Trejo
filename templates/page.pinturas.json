@@ -289,7 +289,7 @@
             "indent": false,
             "link": "",
             "caption": "",
-            "content_position": "justify-center items-center text-center",
+            "content_position": "justify-center items-start text-center",
             "color_scheme": ""
           }
         },
