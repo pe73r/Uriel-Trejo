@@ -239,12 +239,7 @@
                         </a>
                         {%- if article.image != blank -%}
                           <div class="mr-4 w-16">
-                            {%
-                              render 'image-crop' with
-                              image: article.image,
-                              ratio: 1,
-                              sizes: article_sizes
-                            %}
+                            {% render 'image-crop' with image, image: article.image, ratio: 1, sizes: article_sizes %}
                           </div>
                         {%- endif -%}
                         <div>
@@ -423,3 +418,20 @@
   ]
 }
 {% endschema %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: |-
+    {%
+                                  render 'image-crop' with
+                                  image: article.image,
+                                  ratio: 1,
+                                  sizes: article_sizes
+                                %}
+  to: "{% render 'image-crop' with image, image: article.image, ratio: 1, sizes: article_sizes
+    %}"
+  position: 10206..10296
+{% endcomment %}

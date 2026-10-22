@@ -47,10 +47,7 @@
 
     {%- if fallback_image -%}
       <div x-show="showFallbackImage">
-        {%-
-          render 'image-fit' with
-          image: fallback_image
-        -%}
+        {%- render 'image-fit' with image, image: fallback_image -%}
       </div>
     {%- endif -%}
   {%- endif -%}
@@ -91,10 +88,7 @@
           <source src="{{ source.url }}" type="{{ source.mime_type }}">
         {% endfor %}
         {%- if fallback_image -%}
-          {%-
-            render 'image-fit' with
-            image: fallback_image
-          -%}
+          {%- render 'image-fit' with image, image: fallback_image -%}
         {%- endif -%}
         Sorry, your browser doesn't support embedded videos.
       </video>
@@ -126,3 +120,24 @@
     ></script>
   {% endif %}
 {% endunless %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: |-
+    {%-
+              render 'image-fit' with
+              image: fallback_image
+            -%}
+  to: "{%- render 'image-fit' with image, image: fallback_image -%}"
+  position: 1624..1684
+- from: |-
+    {%-
+                render 'image-fit' with
+                image: fallback_image
+              -%}
+  to: "{%- render 'image-fit' with image, image: fallback_image -%}"
+  position: 2844..2904
+{% endcomment %}

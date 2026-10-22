@@ -74,17 +74,9 @@
                   or collection.products.first != blank
                 %}
                   {%- assign image = collection.featured_image -%}
-                  {%
-                    render 'image-crop' with
-                    image: image,
-                    sizes: sizes,
-                    ratio: ratio
-                  %}
+                  {% render 'image-crop' with image, image: image, sizes: sizes, ratio: ratio %}
                 {%- else -%}
-                  {%
-                    render 'image-crop-placeholder' with
-                    ratio: ratio
-                  %}
+                  {% render 'image-crop-placeholder' with ratio, ratio: ratio %}
                 {%- endif -%}
               </div>
             </div>
@@ -144,17 +136,9 @@
                       or collection.products.first != blank
                     %}
                       {%- assign image = collection.featured_image -%}
-                      {%
-                        render 'image-crop' with
-                        image: image,
-                        sizes: sizes,
-                        ratio: ratio
-                      %}
+                      {% render 'image-crop' with image, image: image, sizes: sizes, ratio: ratio %}
                     {%- else -%}
-                      {%
-                        render 'image-crop-placeholder' with
-                        ratio: ratio
-                      %}
+                      {% render 'image-crop-placeholder' with ratio, ratio: ratio %}
                     {%- endif -%}
                   </div>
                 </div>
@@ -193,7 +177,7 @@
       </ul>
 
       {% if paginate.pages > 1 %}
-        {% render 'pagination' with paginate: paginate, section_color: section_color %}
+        {% render 'pagination' with paginate, paginate: paginate, section_color: section_color %}
       {% endif %}
     {% endpaginate %}
   {%- endif -%}
@@ -447,3 +431,49 @@
   ]
 }
 {% endschema %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: |-
+    {%
+                        render 'image-crop' with
+                        image: image,
+                        sizes: sizes,
+                        ratio: ratio
+                      %}
+  to: "{% render 'image-crop' with image, image: image, sizes: sizes, ratio: ratio
+    %}"
+  position: 2963..3041
+- from: |-
+    {%
+                        render 'image-crop-placeholder' with
+                        ratio: ratio
+                      %}
+  to: "{% render 'image-crop-placeholder' with ratio, ratio: ratio %}"
+  position: 3089..3151
+- from: |-
+    {%
+                            render 'image-crop' with
+                            image: image,
+                            sizes: sizes,
+                            ratio: ratio
+                          %}
+  to: "{% render 'image-crop' with image, image: image, sizes: sizes, ratio: ratio
+    %}"
+  position: 5749..5827
+- from: |-
+    {%
+                            render 'image-crop-placeholder' with
+                            ratio: ratio
+                          %}
+  to: "{% render 'image-crop-placeholder' with ratio, ratio: ratio %}"
+  position: 5883..5945
+- from: "{% render 'pagination' with paginate: paginate, section_color: section_color
+    %}"
+  to: "{% render 'pagination' with paginate, paginate: paginate, section_color: section_color
+    %}"
+  position: 7604..7693
+{% endcomment %}

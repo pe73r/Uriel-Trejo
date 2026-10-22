@@ -80,21 +80,12 @@
             style="padding-top: {{ 1 | divided_by: ratio | times: 100 }}%;"
           >
             {%- if product.featured_media != blank -%}
-              {%-
-                render 'image-fit' with
-                image: product.featured_media,
-                sizes: sizes,
-                contain: contain
-              -%}
+              {%- render 'image-fit' with image, image: product.featured_media, sizes: sizes, contain: contain -%}
             {%- endif -%}
           </div>
         {%- elsif object_crop_grid -%}
           {%- if product.featured_media != blank -%}
-            {%-
-              render 'image-crop' with
-              image: product.featured_media,
-              ratio: ratio,
-            -%}
+            {%- render 'image-crop' with image, image: product.featured_media, ratio: ratio -%}
           {%- endif -%}
         {%- else -%}
           {%- liquid
@@ -153,7 +144,7 @@
                         x-show.transition.opacity.duration.200ms="currentSwatchVariantId === '{{ variant.id }}'"
                       >
                         <div class="relative h-full w-full">
-                          {% render 'image-fit', image: variant.image, contain: object_contain_grid, sizes: sizes, extra_classes = '' %}
+                          {% render 'image-fit', image: variant.image, contain: object_contain_grid, sizes: sizes %}
                         </div>
                       </div>
                     {%- endif -%}
@@ -323,3 +314,34 @@
     </div>
   </div>
 </div>
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: |-
+    {%-
+                    render 'image-fit' with
+                    image: product.featured_media,
+                    sizes: sizes,
+                    contain: contain
+                  -%}
+  to: "{%- render 'image-fit' with image, image: product.featured_media, sizes: sizes,
+    contain: contain -%}"
+  position: 3156..3256
+- from: |-
+    {%-
+                  render 'image-crop' with
+                  image: product.featured_media,
+                  ratio: ratio,
+                -%}
+  to: "{%- render 'image-crop' with image, image: product.featured_media, ratio: ratio
+    -%}"
+  position: 3404..3487
+- from: "{% render 'image-fit', image: variant.image, contain: object_contain_grid,
+    sizes: sizes, extra_classes = '' %}"
+  to: "{% render 'image-fit', image: variant.image, contain: object_contain_grid,
+    sizes: sizes %}"
+  position: 6143..6233
+{% endcomment %}

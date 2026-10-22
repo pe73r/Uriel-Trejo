@@ -192,21 +192,12 @@
             style="padding-top: {{ 1 | divided_by: ratio | times: 100 }}%;"
           >
             {%- if product.featured_media != blank -%}
-              {%-
-                render 'image-fit' with
-                image: product.featured_media,
-                sizes: sizes,
-                contain: contain
-              -%}
+              {%- render 'image-fit' with image, image: product.featured_media, sizes: sizes, contain: contain -%}
             {%- endif -%}
           </div>
         {%- elsif object_crop_grid -%}
           {%- if product.featured_media != blank -%}
-            {%-
-              render 'image-crop' with
-              image: product.featured_media,
-              ratio: ratio,
-            -%}
+            {%- render 'image-crop' with image, image: product.featured_media, ratio: ratio -%}
           {%- endif -%}
         {%- else -%}
           {%- liquid
@@ -597,3 +588,29 @@
     </div>
   {% endif %}
 </div>
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: |-
+    {%-
+                    render 'image-fit' with
+                    image: product.featured_media,
+                    sizes: sizes,
+                    contain: contain
+                  -%}
+  to: "{%- render 'image-fit' with image, image: product.featured_media, sizes: sizes,
+    contain: contain -%}"
+  position: 6705..6805
+- from: |-
+    {%-
+                  render 'image-crop' with
+                  image: product.featured_media,
+                  ratio: ratio,
+                -%}
+  to: "{%- render 'image-crop' with image, image: product.featured_media, ratio: ratio
+    -%}"
+  position: 6953..7036
+{% endcomment %}

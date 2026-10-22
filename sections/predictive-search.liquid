@@ -180,12 +180,7 @@
                   <div class="justify-star flex items-center">
                     {%- if article.image != blank -%}
                       <div class="mr-4 w-16">
-                        {%
-                          render 'image-crop' with
-                          image: article.image,
-                          sizes: article_sizes
-                          ratio: 1
-                        %}
+                        {% render 'image-crop' with image, image: article.image, sizes: article_sizes, ratio: 1 %}
                       </div>
                     {%- endif -%}
                     <div class="text-base">
@@ -273,3 +268,20 @@
     {%- endif -%}
   </span>
 {%- endif -%}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: |-
+    {%
+                              render 'image-crop' with
+                              image: article.image,
+                              sizes: article_sizes
+                              ratio: 1
+                            %}
+  to: "{% render 'image-crop' with image, image: article.image, sizes: article_sizes,
+    ratio: 1 %}"
+  position: 8156..8246
+{% endcomment %}

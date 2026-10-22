@@ -66,12 +66,7 @@
           </div>
         {%- else -%}
           <div class="relative">
-            {%
-              render 'image-crop' with
-              image: image,
-              sizes: sizes,
-              ratio: ratio
-            %}
+            {% render 'image-crop' with image, image: image, sizes: sizes, ratio: ratio %}
           </div>
         {%- endif -%}
       {%- else -%}
@@ -374,3 +369,20 @@
   ]
 }
 {% endschema %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: |-
+    {%
+                  render 'image-crop' with
+                  image: image,
+                  sizes: sizes,
+                  ratio: ratio
+                %}
+  to: "{% render 'image-crop' with image, image: image, sizes: sizes, ratio: ratio
+    %}"
+  position: 2429..2507
+{% endcomment %}

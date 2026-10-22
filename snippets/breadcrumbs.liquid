@@ -82,7 +82,7 @@
                   {{- product.title -}}
                 </a>
               </li>
-            {%- when 'collection' and collection.handle -%}
+            {%- when 'collection' -%}
               {%- if current_tags -%}
                 <li class="mx-2">
                   <span class="block py-section-vertical-spacing-half" aria-hidden="true">
@@ -210,3 +210,13 @@
     </div>
   </section>
 {%- endunless -%}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{%- when 'collection' and collection.handle -%}"
+  to: "{%- when 'collection' -%}"
+  position: 3092..3117
+{% endcomment %}
